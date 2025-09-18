@@ -54,6 +54,7 @@ function makeDraggable(element) {
 
     if (e.target === header || header.contains(e.target)) {
       isDragging = true;
+      element.classList.add('dragging');
     }
   }
 
@@ -74,6 +75,7 @@ function makeDraggable(element) {
     initialX = currentX;
     initialY = currentY;
     isDragging = false;
+    element.classList.remove('dragging');
   }
 }
 
